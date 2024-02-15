@@ -168,8 +168,8 @@ const Player = () => {
       </div>
      
       <div className='mt-5 py-5'>
-        <h1 className='text-xl md:text-2xl text-gray-900 font-bold pb-2 mb-2'>{currentMedia.title}</h1>
-        <h2 className='text-sm border p-5 shadow-sm rounded-md bg-gray-400/20 md:text-md font-light'>{currentMedia.description}</h2>
+        <h1 className='text-xl md:text-2xl text-white font-bold pb-2 mb-2'>{currentMedia.title}</h1>
+        <h2 className='text-sm outline text-gray-100 outline-gray-500/20 p-5 rounded-md md:text-md font-light'>{currentMedia.description}</h2>
       </div>
       
     </div>

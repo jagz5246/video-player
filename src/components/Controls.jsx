@@ -45,7 +45,7 @@ const Controls = forwardRef(({
             aria-label="Default" 
             onChange={onSeek}
             onChangeCommitted={onSeekMouseUp} />
-    <div className='flex md:gap-4 min-w-full  py-2 px-2 justify-center items-center rounded-md shadow-lg bg-white'>
+    <div className='flex md:gap-4 min-w-full  py-2 px-2 justify-center items-center rounded-md bg-white'>
 
         <div className="flex md:gap-2 items-center mx-2">
         <FaBackward className='cursor-pointer md:text-2xl mx-2 text-gray-900 hover:text-violet-700 transition ease-in-out delay-50' onClick={onRewind}/>
@@ -63,8 +63,13 @@ const Controls = forwardRef(({
                 { mute ? <FaVolumeOff className='text-xl hover:text-violet-700 transition ease-in-out delay-50'/> : 
                 <FaVolumeUp onClick={onMute} className='text-xl hover:text-violet-700 transition ease-in-out delay-50 cursor-pointer'/>}
                 <Slider
+                aria-label='slider'
                 style={{ color: "#6d08cc", width:'80px' }}
                 onChange={onVolumeChangeHandler}
+                role="slider"
+                aria-valuenow={ mute ? 0 : volume * 100}
+                aria-valuemin="0"
+                aria-valuemax="100"
                 min = {0}
                 max = {100}
                 value= { mute ? 0 : volume * 100}

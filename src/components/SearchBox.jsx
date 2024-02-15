@@ -34,25 +34,26 @@ const SearchBox = ({data}) => {
     }
 
   return (
-    <div className='container'>
+    <div>
         <input
         ref={textRef}
-        className=' sm:w-full lg:w-2/3 ml-2 my-4 pl-2 py-2 '
+        className='w-full my-4 pl-2 py-2 bg-[#0a0a0a] outline text-white outline-gray-500/20 rounded-md focus:outline-gray-100/20'
         type="text"
         onChange={handleChange}
         placeholder='search here...'/>
 
         {/* Display the search results */}
-        {results && (<ul className='absolute border py-2 -mt-4 ml-2 rounded bg-white w-96' >
+        {results && (<ul className='w-full outline outline-gray-500/20 py-2 -mt-4 rounded bg-[#0a0a0a]' >
         {results?.map((result, index) => (
             <li 
             ref={mediaRef}
-            className='cursor-pointer text-gray-900 my-2 hover:bg-violet-100 pl-2 py-2 transition ease-in-out' 
+            className='cursor-pointer text-white my-2 hover:bg-violet-300 pl-2 py-2 transition ease-in-out' 
             key={index}
             onClick={()=>handleClick(result)}
             >{result.title}</li>
         ))}
-        </ul>)}
+        </ul>
+        )}
     </div>
   )
 }

@@ -20,9 +20,9 @@ function App() {
 
   return (
     <MediaContext.Provider value={[currentMedia, setCurrentMedia]}>
-      <div>
+      <div className='bg-[#0a0a0a]'>
       <Navbar />
-      <div className=' min-h-screen lg:flex lg:gap-6 justify-center p-10'>
+      <div className=' min-h-screen min-w-full lg:flex lg:gap-6 justify-center p-10'>
       <Player/>
       <Playlist media={videos}/>
     </div>
