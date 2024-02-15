@@ -1,6 +1,6 @@
 import React,{useContext, useState, useRef} from 'react';
 import { MediaContext } from '../Context';
-import ReactPlayer from 'react-player/lazy';
+import ReactPlayer from 'react-player';
 import Controls from './Controls';
 import { formatTime } from './TimeFormat';
 import screenfull from 'screenfull';
