@@ -14,7 +14,7 @@ const Playlist = ({media}) => {
     }
 
     return (
-    <div className=' sm:w-full md:w-1/2 lg:h-full outline outline-gray-500/20 rounded-md my-2 px-2 py-2 overflow-scroll'>
+    <div className=' sm:w-full md:w-1/2 lg:h-full outline outline-gray-500/20 rounded-md my-2 px-4 py-2 overflow-scroll'>
     
     <SearchBox data={media}/>
     {/* Playlist that can be re-ordered */}

@@ -46,7 +46,7 @@ const SearchBox = ({data}) => {
         {results?.map((result, index) => (
             <li 
             ref={mediaRef}
-            className='cursor-pointer text-white my-2 hover:bg-violet-300 pl-2 py-2 transition ease-in-out' 
+            className='cursor-pointer text-white my-2 hover:bg-violet-500 pl-2 py-2 transition ease-in-out' 
             key={index}
             onClick={()=>handleClick(result)}
             >{result.title}</li>
