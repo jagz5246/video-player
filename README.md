@@ -26,9 +26,25 @@ Clicking on a video in the playlist loads and plays that video in the video play
 ### Search:
 Provides a search box for users to search for videos within the playlist.
 
+# 🗂️ Folder Structure:
+--public<br />
+--src<br />
+&nbsp;&nbsp;&nbsp;-assets<br />
+&nbsp;&nbsp;&nbsp;-components<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Controls.jsx<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Navbar.jsx<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Player.jsx<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Playlist.jsx<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Searchbox.jsx<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-TimeFormat.js<br />
+&nbsp;&nbsp;&nbsp;-Context.jsx<br />
+&nbsp;&nbsp;&nbsp;-data.js<br />
+
 ## 📦 Libraries & Packages:
 ### Tailwind CSS:
 Utilized for styling and making the application responsive.
+### MaterialUI:
+Utilized MaterialUI's styled components for the player controls.
 ### react-player:
 Used for the video player component.
 ### react-draggable:
