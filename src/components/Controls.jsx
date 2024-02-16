@@ -38,16 +38,18 @@ const Controls = forwardRef(({
   return (
     <div ref={ref}
     className=' -mt-14'>
-        <Slider style={{ position:'relative', color: "#6d08cc", width:'100%', marginBottom:'-20px'}}
+        <div className='-mb-5'>
+        <Slider style={{ position:'relative', color: "#6d08cc", width:'100%'}}
             min = {0}
             max = {100}
             value = {played * 100} 
             aria-label="Default" 
             onChange={onSeek}
             onChangeCommitted={onSeekMouseUp} />
+        </div>
     <div className='flex md:gap-4 min-w-full  py-2 px-2 justify-center items-center rounded-md bg-white'>
 
-        <div className="flex md:gap-2 items-center mx-2">
+        <div className="flex md:gap-2 items-center mr-1 sm:mr-2">
         <FaBackward className='cursor-pointer md:text-2xl mx-2 text-gray-900 hover:text-violet-700 transition ease-in-out delay-50' onClick={onRewind}/>
         {playing ? <FaPause className='cursor-pointer md:text-2xl mx-2 text-gray-900  hover:text-violet-700 transition ease-in-out delay-50' onClick={onPlayPause}/> : 
                    <FaPlay className='cursor-pointer md:text-2xl mx-2 text-gray-900  hover:text-violet-700 transition ease-in-out delay-50' onClick={onPlayPause}/>
@@ -57,14 +59,14 @@ const Controls = forwardRef(({
         </div>
         <div className='w-full flex items-center gap-2 md:gap-4'>
             
-            <span className='text-sm text-gray-700 font-semibold'>{currentTime} / {duration}</span>
+            <span className='text-xs pr-2 md:text-sm text-gray-700 font-semibold'>{currentTime} / {duration}</span>
         </div>
             <div className='flex gap-4 items-center'>
                 { mute ? <FaVolumeMute className='text-xl hover:text-violet-700 transition ease-in-out delay-50'/> : 
                 <FaVolumeUp onClick={onMute} className='text-xl hover:text-violet-700 transition ease-in-out delay-50 cursor-pointer'/>}
                 <Slider
                 aria-label='slider'
-                style={{ color: "#6d08cc", width:'80px' }}
+                style={{ color: "#6d08cc", width:'50px' }}
                 onChange={onVolumeChangeHandler}
                 role="slider"
                 aria-valuenow={ mute ? 0 : volume * 100}
@@ -78,7 +80,7 @@ const Controls = forwardRef(({
             </div>
            
             <div className='flex md:gap-2 items-center'>
-                <span className='text-md px-2 cursor-pointer hover:text-violet-700 transition ease-in-out delay-50 text-black'
+                <span className='text-md md:px-2 cursor-pointer hover:text-violet-700 transition ease-in-out delay-50 text-black'
                 onClick={()=>onPlayRate(0.5)}
                 >{playRate}x</span>
                 <FaExpand onClick={onToggleFullScreen} className='text-xl mx-2 hover:text-violet-700 transition ease-in-out delay-50 cursor-pointer'/>

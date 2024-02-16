@@ -136,7 +136,7 @@ const Player = () => {
             playbackRate={playbackRate}
             playing={playing}
             playIcon={<div style={{width:'100%', height:'100%', background:'linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))'}}>
-              <FaPlayCircle style={{width:'100px', height:'100px', color:'#f7f5f7', marginTop:'20%', marginLeft:'45%',marginBottom:'20%'}}/>
+              <FaPlayCircle style={{width:'10%', height:'10%', color:'#f7f5f7', marginTop:'20%', marginLeft:'45%',marginBottom:'20%'}}/>
             </div>}
             volume = {volume}
             muted={muted}
