@@ -10,7 +10,6 @@ const SearchBox = ({data}) => {
 
     //search for the desired video
     const handleChange = () =>{
-        console.log(textRef.current.value)
         var query = textRef.current.value;
         const filteredData = data.filter((entry)=> entry.title.toLowerCase().includes(query))
         if(query){

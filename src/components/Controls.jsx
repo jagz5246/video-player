@@ -4,7 +4,7 @@ import {FaPause} from '@react-icons/all-files/fa/FaPause.esm'
 import {FaForward} from '@react-icons/all-files/fa/FaForward.esm' 
 import {FaBackward} from '@react-icons/all-files/fa/FaBackward.esm' 
 import {FaVolumeUp} from '@react-icons/all-files/fa/FaVolumeUp.esm'
-import {FaVolumeOff} from '@react-icons/all-files/fa/FaVolumeOff.esm'
+import {FaVolumeMute} from '@react-icons/all-files/fa/FaVolumeMute.esm'
 import {FaExpand} from '@react-icons/all-files/fa/FaExpand.esm' 
 import Slider from '@mui/material/Slider';
 import { forwardRef } from "react";
@@ -59,8 +59,8 @@ const Controls = forwardRef(({
             
             <span className='text-sm text-gray-700 font-semibold'>{currentTime} / {duration}</span>
         </div>
-            <div className='flex gap-2 items-center'>
-                { mute ? <FaVolumeOff className='text-xl hover:text-violet-700 transition ease-in-out delay-50'/> : 
+            <div className='flex gap-4 items-center'>
+                { mute ? <FaVolumeMute className='text-xl hover:text-violet-700 transition ease-in-out delay-50'/> : 
                 <FaVolumeUp onClick={onMute} className='text-xl hover:text-violet-700 transition ease-in-out delay-50 cursor-pointer'/>}
                 <Slider
                 aria-label='slider'
@@ -91,12 +91,3 @@ const Controls = forwardRef(({
 })
 
 export default Controls
-
-
-{/* <Slider style={{ color: "#6d08cc", width:'80%'}}
-            min = {0}
-            max = {100}
-            value = {played * 100} 
-            aria-label="Default" 
-            onChange={onSeek}
-            onChangeCommitted={onSeekMouseUp} /> */}

@@ -3,7 +3,9 @@ import { MediaContext } from '../Context';
 import ReactPlayer from 'react-player';
 import Controls from './Controls';
 import { formatTime } from './TimeFormat';
+import {FaPlayCircle} from '@react-icons/all-files/fa/FaPlayCircle.esm'
 import screenfull from 'screenfull';
+import { baseUrl } from '../App';
 
 let count =0
 
@@ -12,7 +14,7 @@ const Player = () => {
     const videoPlayerRef = useRef(null);
     const controlRef = useRef(null)
     const fullScreenRef = useRef(null)
-
+  
 
     const [videoState, setVideoState] = useState({
         playing: true,
@@ -133,11 +135,16 @@ const Player = () => {
             ref={videoPlayerRef}
             playbackRate={playbackRate}
             playing={playing}
+            playIcon={<div style={{width:'100%', height:'100%', background:'linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))'}}>
+              <FaPlayCircle style={{width:'100px', height:'100px', color:'#f7f5f7', marginTop:'20%', marginLeft:'45%',marginBottom:'20%'}}/>
+            </div>}
             volume = {volume}
             muted={muted}
             width="100%"
             height="98%"
             url={currentMedia.source}
+            light={`${currentMedia.thumb}`}
+            // light='http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg'
             onProgress = {progressHandler}
          />
          <div className=' w-full -mt-15 mx-auto relative'>

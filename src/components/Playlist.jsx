@@ -29,10 +29,11 @@ const Playlist = ({media}) => {
             })}
 
             key={index}>
-                <FaBars className='text-white align-middle text-xs' />
+                <FaBars className='text-white align-middle text-xs'/>
                 <img src={`http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/${data.thumb}`}
                 className='rounded-md'
                 alt='thumbnail'
+                title='Drag to reorder'
                 width={100}
                 height={60}/>
                 <div>

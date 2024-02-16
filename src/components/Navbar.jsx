@@ -9,7 +9,7 @@ const Navbar = () => {
           alt="logo" 
           width={120} 
           height={120}/>
-          <h1 className='text-white text-2xl font-bold md:text-4xl'><span className='text-violet-500'>i</span>Player</h1>
+          <h1 className='bg-gradient-to-r from-violet-700 via-violet-300 to-indigo-500 inline-block text-transparent bg-clip-text text-2xl font-bold md:text-4xl'><span className='text-3xl  md:text-5xl'>i</span>Player</h1>
     </div>
   )
 }
